@@ -80,3 +80,303 @@ const dishes: Dish[] = [
   { id: 'kibble', name: 'Puppy kibble', emoji: '🥣', detail: 'His everyday favorite', boost: 18, tint: '#f2dfc1' },
   { id: 'chicken', name: 'Chicken bites', emoji: '🍗', detail: 'Tiny, tasty pieces', boost: 24, tint: '#f4c6b7' },
   { id: 'pancakes', name: 'Pup pancakes', emoji: '🥞', detail: 'A weekend treat', boost: 28, tint: '#e9d6a9' },
+className="rounded-full bg-[#fff6d7] px-2 py-1 text-[10px] font-bold uppercase tracking-wider">Today</span>
+            </div>
+            <p className="font-serif text-lg leading-tight">Small rituals,<br />big tail wags.</p>
+            <p className="mt-2 text-xs leading-relaxed text-[#806741]">Bruno is here whenever you need a soft hello.</p>
+          </div>
+        </aside>
+
+        <main className="min-w-0 flex-1">
+          <header className="flex items-center justify-between px-5 pb-2 pt-6 sm:px-8 md:px-12 md:pt-9">
+            <div className="flex items-center gap-3 md:hidden"><Logo compact /></div>
+            <div className="hidden md:block">
+               <p className="text-sm font-semibold text-muted-foreground">{new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date())}</p>
+              <h1 className="mt-1 font-serif text-3xl text-foreground">{view === 'home' ? 'A good day starts here.' : view === 'wardrobe' ? 'Bruno’s closet.' : 'A little care goes a long way.'}</h1>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="hidden items-center gap-2 rounded-full bg-[hsl(var(--card))] px-3 py-2 text-xs font-semibold text-muted-foreground shadow-sm sm:flex">
+                <span className="h-2 w-2 rounded-full bg-[#7fb8a8]" />
+                Saved locally
+              </div>
+              <button aria-label="More options" data-testid="button-more-options" className="rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
+                draftName={draftName}
