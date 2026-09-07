@@ -379,4 +379,32 @@ className="rounded-full bg-[#fff6d7] px-2 py-1 text-[10px] font-bold uppercase t
             {view === 'settings' && (
               <SettingsView
                 ownerName={ownerName}
+                draftName={draftName} rounded-full p-2 text-muted-foreground transition hover:bg-[hsl(var(--muted))]"><MoreHorizontal size={21} /></button>
+            </div>
+          </header>
+
+          <div className="px-5 pb-28 pt-5 sm:px-8 md:px-12 md:pb-12 md:pt-8">
+            {view === 'home' && (
+              <HomeView
+                greetingName={greetingName}
+                stats={stats}
+                message={message}
+                emotion={mood}
+                activeOutfit={activeOutfit}
+                lastAction={lastAction}
+                onFeed={openFoodTray}
+                onPlay={() => doAction('play')}
+                onClean={openBath}
+                onDress={() => setView('wardrobe')}
+                onSettings={() => setView('settings')}
+                onTouch={touchPuppy}
+                onScratch={scratchPuppy}
+              />
+            )}
+            {view === 'wardrobe' && (
+              <WardrobeView outfit={outfit} activeOutfit={activeOutfit} onChoose={chooseOutfit} onBack={() => setView('home')} />
+            )}
+            {view === 'settings' && (
+              <SettingsView
+                ownerName={ownerName}
                 draftName={draftName}
